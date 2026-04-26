@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Temperature Unit Converter </title>
+<style>
+body
+{
+text-align: center;
+background-color : #F7E1F4;
+}
+div
+{
+background-color : #E3FFFA;
+font-size : 20px;
+border : 2px solid black;
+border-radius : 5px;
+}
+button
+{
+font-size : 20px;
+border-radius: 14px;
+}
+input 
+{
+font-size: 20px;
+border-radius:10px;
+}
+p
+{
+font-size: 25px;
+}
+</style>
+</head>
+<body>
+
+<h1 align="center"> Temperature Unit Converter </h1>
+
+<div>
+<h2 align = "center">  Celcius  to  Farenheit  </h2>
+<form>
+<h4> Enter Temperature (Celcius) : </h4>
+<input type=number id="celcTemp"> <br> <br>
+<button type="button" onclick="ConvertC()"> Convert to Farenheit </button><br>
+<p id="celcToFar"> </p> <br> <br>
+<br> <br>
+</div>
+
+
+<br> <br>
+<div>
+<h2 align="center"> Farenheit to Celcius  </h2>
+<h4> Enter Temperature (Farenheit) : </h4>
+<input type=number id="FarTemp"> <br> <br>
+<button type="button" onclick="ConvertF()"> Convert to Celcius </button> <br>
+<p id="farToCelc"> </p> <br> <br>
+<br> <br>
+</div>
+</form>
+
+
+<script type=text/javascript>
+
+function ConvertC()
+{
+var a = document.getElementById("celcTemp").value;
+var farh = (a *9/5) + 32 ; 
+document.getElementById("celcToFar").innerHTML = ("Celcius to Farenheit : " + farh + " Farenheit"); 
+};
+function ConvertF()
+{
+var b = document.getElementById("FarTemp").value;
+var celc = (b - 32)*5/9;
+document.getElementById("farToCelc").innerHTML = ("Farenheit to Celcius : " + celc +  "  Celcius");
+};
+</script>
+</body>
+</html>
+
+
