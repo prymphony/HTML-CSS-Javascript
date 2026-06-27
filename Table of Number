@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> WAD Practical  02</title>
+</head>
+
+<body>
+
+<form method="GET" >
+<h2> Table of Number </h2>
+
+Enter the Number : 
+<input type="number" name="num1" id="numb">
+<br>
+Enter the limit of Table :
+<input type="number" name="num2" id="numlim">
+<br>
+<button type="button" onclick="table()"> Print Table </button>
+
+</form>
+<p id="output">   </p>
+
+<script >
+
+function table()
+{
+var i;
+let a = parseInt(document.getElementById("numb").value);
+let b = parseInt(document.getElementById("numlim").value);
+
+
+let mul = "   "
+for(i = 1; i<=b; i++)
+{
+  mul = mul + ( a + " * " +  i + " = " + (a*i) + " <br> ") ;
+}
+document.getElementById("output").innerHTML = (mul);
+}
+</script>
+
+</body>
+</html>
