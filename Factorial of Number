@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> WAD Practical </title>
+</head>
+
+<body>
+
+<form method="GET" name="form1">
+<h2> Factorial of Number. </h2>
+
+Enter a Number :
+<input type="number" name="num" id="num">
+<br>
+<input type="submit" value="FACTORIAL" onclick="factorial()">
+</form>
+
+<script>
+function factorial()
+{
+let a=parseInt(document.getElementById("num").value);
+var i, fact = 1;
+
+for(i=1; i<=a; i++)
+{
+fact=fact*i ;
+}
+alert("Factorial is  " + fact);
+}
+
+</script>
+</body>
+</html>
