@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title> String Function </title>
+<title> Vowel Count </title>
 </head>
-<body>
+
+<body align="center">
+
 <form name="PForm">
-<br>
-<h1> Count Vowel </h1>
-<br>
-Enter Your Name  : 
-<input type=text name="t1" >
-<br> <br>
-<input type=button name="btn" value="Count Vowel" onClick="cntv()">
 
+Enter a String :  <input type="text" id="string" name="t1" placeholder="Input">
+<br><br>
+<input type="button" name="CheckButton" value="Count Vowels." onClick="cntVow()">
 </form>
-</body>
-<script type="text/javascript">
-function cntv()
-{
-var i,s,ch,c;
-c=0;
-s=PForm.t1.value;
-for(i=0;i<=s.length;i++)
-  {
-      ch=s.charAt(i);
-      if(ch=="A"|| ch=="a"||ch=="E"|| ch=="e"||ch=="I"|| ch=="i"||ch=="O"|| ch=="o"||ch=="U"|| ch=="u")
-      c++;
-   }
-alert("Number of Vowels in Name are :  " +  c);
-}
 
+</body>
+
+<script type="text/javascript">
+function cntVow()
+{
+var str, i, character, counter;
+counter = 0;
+str = PForm.t1.value;
+for(i=0; i<=str.length; i++)
+{
+character = str.charAt(i);
+if (character=="A"|| character=="a"|| character=="E"|| character=="e"|| character=="I"|| character=="i"|| character=="O"|| character=="o"|| character=="U"|| character=="u")
+counter++;
+
+}
+alert("Number of Vowels = " + counter);
+
+}
 </script>
 </html>
